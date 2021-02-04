@@ -12,6 +12,11 @@ class SlideRotateSideMenuState extends SideMenuState {
       child: Stack(
         fit: StackFit.expand,
         children: [
+          Image(
+            image: AssetImage(
+              widget.slideMenuBackgroundImageURI,
+            ),
+            fit: BoxFit.cover,),
           Positioned(
             top: statusBarHeight + (widget?.closeIcon?.size ?? 25.0) * 2,
             bottom: 0.0,

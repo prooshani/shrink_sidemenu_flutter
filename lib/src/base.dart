@@ -54,6 +54,12 @@ class SideMenu extends StatefulWidget {
   /// default: `275.0`
   final double maxMenuWidth;
 
+
+  /// Defining Background for slideMenu
+  ///
+  ///
+  final String slideMenuBackgroundImageURI;
+
   /// Type of Side menu
   ///
   /// 1. shrikNRotate
@@ -61,6 +67,7 @@ class SideMenu extends StatefulWidget {
   /// 3. slideNRotate
   /// 4. slide
   final SideMenuType type;
+
 
   /// Liquid Shrink Side Menu is compatible with [Liquid ui](https://pub.dev/packages/liquid_ui)
   ///
@@ -106,6 +113,8 @@ class SideMenu extends StatefulWidget {
     this.menu,
     this.type = SideMenuType.shrikNRotate,
     this.maxMenuWidth = 275.0,
+    this.slideMenuBackgroundImageURI,
+
     bool inverse = false,
   })  : assert(child != null),
         assert(menu != null),

@@ -8,10 +8,16 @@ class SlideSideMenuState extends SideMenuState {
     final statusBarHeight = mq.padding.top;
 
     return Material(
-      color: widget.background ?? const Color(0xFF112473),
+      //color: widget.background ?? const Color(0xFF112473),
+      color: Colors.transparent,
       child: Stack(
         fit: StackFit.expand,
         children: [
+          Image(
+      image: AssetImage(
+        widget.slideMenuBackgroundImageURI,
+      ),
+      fit: BoxFit.cover,),
           Positioned(
             top: statusBarHeight + (widget?.closeIcon?.size ?? 25.0) * 2,
             width: min(size.width * 0.70, widget.maxMenuWidth),
